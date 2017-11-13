@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="demo" width="600" height="600"></canvas><!--canvas标签的宽高，请在标签内进行设置，不要用CSS-->
+	</body>
+	<script type="text/javascript">
+		/*第一步，获取canvas标签*/
+		var can = document.getElementById("demo");
+		can.style.border='1px solid red';
+		can.width=600;
+		can.height=600;
+		/*canvas的宽高直接用width和height,千万别can.style.width*/
+		
+		
+		/*第二步，获取canvas的上下文（也就是画布的工具栏）*/
+		var ctx = can.getContext('2d');
+		
+		
+		/*第三部：绘制*/
+		/*画图，第一步，定位坐标点*/
+		ctx.moveTo(100,100)//将画笔移动到100，100的坐标点
+		ctx.lineTo(200,100)//将画笔从100,100水平移动到200,100的位置
+		ctx.lineTo(100,200)//将画笔从200,100移动到100,200的位置
+		
+		/*闭合路径*/
+		ctx.closePath()闭合路径
+		
+		//设置线宽
+		ctx.lineWidth = 4;
+		
+		
+		//设置描边
+		ctx.strokeStyle = 'red';//设置描边样式
+		ctx.stroke()//描边的意思
+		
+		
+		//设置填充
+		ctx.fillStyle = 'yellow';//设置填充样式
+		ctx.fill();
+	</script>
+	
+	
+</html>
